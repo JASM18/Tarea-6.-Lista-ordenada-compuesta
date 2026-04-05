@@ -1,23 +1,6 @@
-#include <iostream>
 
 //***********************************
-// CONSTRUCTORES
-//***********************************
-
-//ListaOrdenada::ListaOrdenada(const ListaOrdenada& otra)
-//{
-//    //copy ctor
-//}
-
-//ListaOrdenada& ListaOrdenada::operator=(const ListaOrdenada& rhs)
-//{
-//    if (this == &rhs) return *this; // handle self assignment
-//    //assignment operator
-//    return *this;
-//}
-
-//***********************************
-// M�TODOS PUBLICOS
+// M�TODOS PUBLICOS
 //***********************************
 
 template <typename T>
@@ -48,11 +31,29 @@ void ListaOrdenada<T>::Agregar(T valor)
     lista.AgregarFinal(valor);
 }
 
-template <typename T>
-bool ListaOrdenada<T>::BuscarElem(T valor)
-{
+//***********************************
 
+template <typename T>
+bool ListaOrdenada<T>::Eliminar(T valor)
+{
+    int pos = lista.BuscarPosicion(valor); // Busca la primera ocurrencia
+
+    if (pos != -1) {
+        lista.EliminarEnPos(pos);
+        return true;
+    }
+
+    return false; // No lo encontró
 }
+
+//***********************************
+template <typename T>
+bool ListaOrdenada<T>::BuscarElem(T valor) const
+{
+    return lista.BuscarValor(valor);
+}
+
+//***********************************
 
 template <typename T>
 void ListaOrdenada<T>::Vaciar()
@@ -60,32 +61,45 @@ void ListaOrdenada<T>::Vaciar()
     lista.Vaciar();
 }
 
+//***********************************
+
 template <typename T>
-bool ListaOrdenada<T>::EstaVacia()
+bool ListaOrdenada<T>::EstaVacia() const
 {
     return lista.EstaVacia();
 }
 
-template <typename T>
-int ListaOrdenada<T>::ObtenerTam()
-{
-    return lista.ObtenerNumElem;
-}
+//***********************************
 
 template <typename T>
-void ListaOrdenada<T>::ImprimirAsc()
+int ListaOrdenada<T>::ObtenerTam() const
+{
+    return lista.ObtenerNumElem();
+}
+
+//***********************************
+
+template <typename T>
+void ListaOrdenada<T>::Imprimir() const
 {
     lista.Imprimir();
 }
 
+//***********************************
+
 template <typename T>
-void ListaOrdenada<T>::ImprimirDesc()
+void ListaOrdenada<T>::ImprimirReversa() const
 {
     lista.ImprimirReversa();
 }
+//***********************************
 
 template <typename T>
-void ListaOrdenada<T>::Mezclar()
+ListaOrdenada<T> ListaOrdenada<T>::Mezclar(ListaOrdenada<T> otraLista)
 {
+    ListaOrdenada<T> listaNueva;
 
+    // AQUÍ HAZ TODO EL COCHINERO
+
+    return listaNueva;
 }

@@ -6,19 +6,21 @@
 template <typename T>
 class ListaOrdenada {
 public:
-//
-//    ListaOrdenada(const ListaOrdenada& other);
-
-//    ListaOrdenada& operator=(const ListaOrdenada& other);
 
     void Agregar(T valor);
+    bool Eliminar(T valor);
+
     bool BuscarElem(T valor) const;
+
     void Vaciar();
     bool EstaVacia() const;
+
     int ObtenerTam() const;
-    void ImprimirAsc() const;
-    void ImprimirDesc() const;
-    ListaOrdenada<T> Mezclar(ListaOrdenada<T> lista2);
+
+    void Imprimir() const;
+    void ImprimirReversa() const;
+
+    ListaOrdenada<T> Mezclar(ListaOrdenada<T> otraLista);
 
 private:
     Lista<T> lista;
