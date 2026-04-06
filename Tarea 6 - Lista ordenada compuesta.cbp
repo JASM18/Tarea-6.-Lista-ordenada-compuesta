@@ -32,6 +32,12 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="CapturaSegura.hpp" />
+		<Unit filename="CapturaSegura.tpp" />
+		<Unit filename="ListaDoble.hpp" />
+		<Unit filename="ListaDoble.tpp" />
+		<Unit filename="ListaOrdenada.hpp" />
+		<Unit filename="ListaOrdenada.tpp" />
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
